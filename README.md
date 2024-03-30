@@ -1,10 +1,10 @@
 # ChimuWaku
+This is our Software Engineering Project repositories.
 
-# Setup
-- git clone https://github.com/Alvin-Winst/ChimuWaku.git
+## Setup
+Just run ```git clone https://github.com/Alvin-Winst/ChimuWaku.git``` in your cmd
 
-
-# Collaborator
-- https://github.com/Alvin-Winst
-- https://github.com/Ren9x
-- https://github.com/aufamsp
+## Collaborator
+- [Alvin] (https://github.com/Alvin-Winst)
+- [Darren] (https://github.com/Ren9x)
+- [Aufa] (https://github.com/aufamsp)
