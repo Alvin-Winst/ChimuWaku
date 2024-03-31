@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 345ac0499adf0a842b9f0dd65e6c0e9a
+guid: 94831765de7e2a24b83742fae0ac444c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -110,7 +110,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slope_0
+      name: SlopeGrass_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c34750085b39242b315cd04c476f5b
+      internalID: -817794243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlopeGrass_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c07931a71d2c8441b348b866f97e717
+      internalID: 2021594824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlopeGrass_2
       rect:
         serializedVersion: 2
         x: 128
@@ -124,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b788c342db280874ea5247846adab90e
-      internalID: -255472510
+      spriteID: 0153e77b3968b024cb7076df8c67ee5d
+      internalID: 1043521751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_1
+      name: SlopeGrass_3
       rect:
         serializedVersion: 2
         x: 160
@@ -145,14 +187,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdbe150a8f3d20b408c9bc981f9f1d4e
-      internalID: -1760135803
+      spriteID: 39198e8b13298a94f9896e861f9d3dfa
+      internalID: 796047404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_2
+      name: SlopeGrass_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec459ebb5be5e94a988bd139dd921c6
+      internalID: -655995223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlopeGrass_5
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d9eeb724a7a3b84b8d7c8058fae4850
-      internalID: 397333789
+      spriteID: 965442a00174342448f497ab4910c857
+      internalID: 550307925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_3
+      name: SlopeGrass_6
       rect:
         serializedVersion: 2
         x: 96
@@ -187,56 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18f5662a8f76743469360fd5c5bf7305
-      internalID: -1619064601
+      spriteID: cd25df9be45db4b4ba6d4988cfe84335
+      internalID: 940944993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cfe7def38cd5f6439706f773094099d
-      internalID: -958305561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slope_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8f4decadc10e3c4d83a5f0b1df7e252
-      internalID: -1838612844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slope_6
+      name: SlopeGrass_7
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ec73874985d9034d93c0cf6ab912339
-      internalID: -682031061
+      spriteID: 26e26e53fdccc1043b9f32cd509a8a28
+      internalID: -1165069905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_7
+      name: SlopeGrass_8
       rect:
         serializedVersion: 2
         x: 32
@@ -271,92 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2beac4e62a29c3342b23cb4b6de8b9ee
-      internalID: 372449572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slope_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44f5b13987da39240a79f0663024412a
-      internalID: 100448015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slope_9
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02c5636053a699d47a20f005b2ba5864
-      internalID: 2039062805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slope_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30f9bff928348b04a9707c680dc6e813
-      internalID: -1295164433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slope_11
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd4e615be98ebd447b0c98f3cfe16a1c
-      internalID: 1655051022
+      spriteID: 3e824cdd1078e174b9cd51ba80eef60d
+      internalID: 1449858137
       vertices: []
       indices: 
       edges: []
@@ -372,18 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slope_0: -255472510
-      Slope_1: -1760135803
-      Slope_10: -1295164433
-      Slope_11: 1655051022
-      Slope_2: 397333789
-      Slope_3: -1619064601
-      Slope_4: -958305561
-      Slope_5: -1838612844
-      Slope_6: -682031061
-      Slope_7: 372449572
-      Slope_8: 100448015
-      Slope_9: 2039062805
+      SlopeGrass_0: -817794243
+      SlopeGrass_1: 2021594824
+      SlopeGrass_2: 1043521751
+      SlopeGrass_3: 796047404
+      SlopeGrass_4: -655995223
+      SlopeGrass_5: 550307925
+      SlopeGrass_6: 940944993
+      SlopeGrass_7: -1165069905
+      SlopeGrass_8: 1449858137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
