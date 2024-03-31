@@ -113,8 +113,8 @@ TextureImporter:
       name: Slope_0
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 160
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b788c342db280874ea5247846adab90e
-      internalID: -255472510
+      spriteID: 78946df124b0e8341a3e865697cfb524
+      internalID: -1177638035
       vertices: []
       indices: 
       edges: []
@@ -134,6 +134,48 @@ TextureImporter:
       name: Slope_1
       rect:
         serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac700c47f2bcce4185317864d0ed623
+      internalID: 1058198888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slope_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f5d4ca8ad352f4fafa861ff34dd512
+      internalID: -2123348160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slope_3
+      rect:
+        serializedVersion: 2
         x: 160
         y: 96
         width: 32
@@ -145,14 +187,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdbe150a8f3d20b408c9bc981f9f1d4e
-      internalID: -1760135803
+      spriteID: 81e81562ebfd8664aa4de4978c3179c2
+      internalID: 588027356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_2
+      name: Slope_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc3a289f121ab44499ae2c0d132a7b2
+      internalID: 2080872142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slope_5
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d9eeb724a7a3b84b8d7c8058fae4850
-      internalID: 397333789
+      spriteID: 7343f12f22480c6429b162f9a94bb79b
+      internalID: 344193665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_3
+      name: Slope_6
       rect:
         serializedVersion: 2
         x: 96
@@ -187,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18f5662a8f76743469360fd5c5bf7305
-      internalID: -1619064601
+      spriteID: b1ed7b836f8652341827901f996bb00d
+      internalID: 1790628253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_4
+      name: Slope_7
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cfe7def38cd5f6439706f773094099d
-      internalID: -958305561
+      spriteID: 5f1d98b58b77f7e4b916fdb2ca49bbe0
+      internalID: 148826746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_5
+      name: Slope_8
       rect:
         serializedVersion: 2
         x: 160
@@ -229,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8f4decadc10e3c4d83a5f0b1df7e252
-      internalID: -1838612844
+      spriteID: c426950a49df1bc44aca49da8a012c99
+      internalID: 91591476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_6
+      name: Slope_9
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ec73874985d9034d93c0cf6ab912339
-      internalID: -682031061
+      spriteID: 830abfcfef62fb649907fb2bb6575b20
+      internalID: -162734112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_7
+      name: Slope_10
       rect:
         serializedVersion: 2
         x: 32
@@ -271,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2beac4e62a29c3342b23cb4b6de8b9ee
-      internalID: 372449572
+      spriteID: 54d923035282c39489d66df5f3a20607
+      internalID: -1052937757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_8
+      name: Slope_11
       rect:
         serializedVersion: 2
         x: 64
@@ -292,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44f5b13987da39240a79f0663024412a
-      internalID: 100448015
+      spriteID: aba2b5c3c83c2414393fa4895e2b80d5
+      internalID: 170386580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_9
+      name: Slope_12
       rect:
         serializedVersion: 2
         x: 96
@@ -313,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c5636053a699d47a20f005b2ba5864
-      internalID: 2039062805
+      spriteID: af0ed4fd72f5c4e45a11723a4ea20af5
+      internalID: 127876032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_10
+      name: Slope_13
       rect:
         serializedVersion: 2
         x: 0
@@ -334,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30f9bff928348b04a9707c680dc6e813
-      internalID: -1295164433
+      spriteID: a10bb35cc725d894a8fc3f7fab018e0a
+      internalID: 623866774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slope_11
+      name: Slope_14
       rect:
         serializedVersion: 2
         x: 32
@@ -355,8 +418,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd4e615be98ebd447b0c98f3cfe16a1c
-      internalID: 1655051022
+      spriteID: 130ccaaee46a06d47a9838c2921a51b0
+      internalID: -1093659559
       vertices: []
       indices: 
       edges: []
@@ -372,18 +435,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slope_0: -255472510
-      Slope_1: -1760135803
-      Slope_10: -1295164433
-      Slope_11: 1655051022
-      Slope_2: 397333789
-      Slope_3: -1619064601
-      Slope_4: -958305561
-      Slope_5: -1838612844
-      Slope_6: -682031061
-      Slope_7: 372449572
-      Slope_8: 100448015
-      Slope_9: 2039062805
+      Slope_0: -1177638035
+      Slope_1: 1058198888
+      Slope_10: -1052937757
+      Slope_11: 170386580
+      Slope_12: 127876032
+      Slope_13: 623866774
+      Slope_14: -1093659559
+      Slope_2: -2123348160
+      Slope_3: 588027356
+      Slope_4: 2080872142
+      Slope_5: 344193665
+      Slope_6: 1790628253
+      Slope_7: 148826746
+      Slope_8: 91591476
+      Slope_9: -162734112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
