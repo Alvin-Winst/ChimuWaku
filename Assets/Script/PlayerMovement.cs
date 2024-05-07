@@ -9,17 +9,34 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
-    [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float groundCheckRadius;
+    [SerializeField] private float slopeCheckDistance;
+    [SerializeField] private float maxSlopeAngle;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask whatIsGround;
+    //[SerializeField] private PhysicsMaterial2D noFriction;
+    //[SerializeField] private PhysicsMaterial2D fullFriction;
 
-    private float dirX = 0f;
-    [SerializeField] private float movSpeed = 7f;
-    [SerializeField] private float jumpForce = 11f;
+    private float xInput;
+    private float slopeDownAngle;
+    private float slopeSideAngle;
+    private float lastSlopeAngle;
 
-    [SerializeField] private float fallMultiplier = 2f;
-    [SerializeField] private float lowJumpMultiplier = 1.5f;
+    private int facingDirection = 1;
 
-    //[SerializeField] private int jumpMax = 1;  the commented code was for doubleJump function
-    //private int jumpCount = 0;
+    private bool isGrounded;
+    private bool isOnSlope;
+    private bool isJumping;
+    private bool canWalkOnSlope;
+    private bool canJump;
+
+    private Vector2 newVelocity;
+    private Vector2 newForce;
+    private Vector2 colliderSize;
+    private Vector2 slopeNormalPerp;
+
 
     private enum MovementState { idle, running, jumping, falling }
 
@@ -32,64 +49,211 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        colliderSize = coll.size;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * movSpeed, rb.velocity.y);
-
-
-        //if (Input.GetButtonDown("Jump") && (IsGrounded() || jumpCount < jumpMax))  this code was for doubleJump function
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
-            //jumpSoundEffect.Play();
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            //  jumpCount++;
-        }
-
-        if (rb.velocity.y < -.01)
-        {
-            rb.velocity = rb.velocity + Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if (rb.velocity.y > .01 && !Input.GetButton("Jump"))
-        {
-            rb.velocity = rb.velocity + Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
-
-        //if (IsGrounded())  This code was for doubleJump function
-        //{
-        //  jumpCount = 0;
-        //}
+        CheckInput();
 
         UpdateAnimationState();
+    }
+
+    private void FixedUpdate()
+    {
+        CheckGround();
+        SlopeCheck();
+        ApplyMovement();
+    }
+
+    private void CheckInput()
+    {
+        xInput = Input.GetAxisRaw("Horizontal");
+
+        if (xInput == 1 && facingDirection == -1)
+        {
+            Flip();
+        }
+        else if (xInput == -1 && facingDirection == 1)
+        {
+            Flip();
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+
+    }
+    private void CheckGround()
+    {
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        isGrounded = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, whatIsGround);
+
+        if (rb.velocity.y <= 0.0f)
+        {
+            isJumping = false;
+        }
+
+        if (isGrounded && !isJumping && slopeDownAngle <= maxSlopeAngle)
+        {
+            canJump = true;
+        }
+
+    }
+
+    private void SlopeCheck()
+    {
+        Vector2 checkPos = transform.position - (Vector3)(new Vector2(0.0f, colliderSize.y / 2));
+        SlopeCheckHorizontal(checkPos);
+        SlopeCheckVertical(checkPos);
+
+    }
+
+    private void SlopeCheckHorizontal(Vector2 checkPos)
+    {
+        RaycastHit2D slopeHitFront = Physics2D.Raycast(checkPos, transform.right, slopeCheckDistance, whatIsGround);
+        RaycastHit2D slopeHitBack = Physics2D.Raycast(checkPos, -transform.right, slopeCheckDistance, whatIsGround);
+
+        if (slopeHitFront)
+        {
+            isOnSlope = true;
+
+            slopeSideAngle = Vector2.Angle(slopeHitFront.normal, Vector2.up);
+
+        }
+        else if (slopeHitBack)
+        {
+            isOnSlope = true;
+
+            slopeSideAngle = Vector2.Angle(slopeHitBack.normal, Vector2.up);
+        }
+        else
+        {
+            slopeSideAngle = 0.0f;
+            isOnSlope = false;
+
+        }
+
+    }
+
+    private void SlopeCheckVertical(Vector2 checkPos)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(checkPos, Vector2.down, slopeCheckDistance, whatIsGround);
+
+        if (hit)
+        {
+
+            slopeNormalPerp = Vector2.Perpendicular(hit.normal).normalized;
+
+            slopeDownAngle = Vector2.Angle(hit.normal, Vector2.up);
+
+            if (slopeDownAngle != lastSlopeAngle)
+            {
+                isOnSlope = true;
+            }
+
+            lastSlopeAngle = slopeDownAngle;
+
+            Debug.DrawRay(hit.point, slopeNormalPerp, Color.blue);
+            Debug.DrawRay(hit.point, hit.normal, Color.green);
+
+        }
+
+        if (slopeDownAngle > maxSlopeAngle || slopeSideAngle > maxSlopeAngle)
+        {
+            canWalkOnSlope = false;
+        }
+        else
+        {
+            canWalkOnSlope = true;
+        }
+
+        if (isOnSlope && canWalkOnSlope && xInput == 0.0f)
+        {
+            //rb.sharedMaterial = fullFriction;
+        }
+        else
+        {
+            //rb.sharedMaterial = noFriction;
+        }
+    }
+
+    private void Jump()
+    {
+        if (canJump)
+        {
+            canJump = false;
+            isJumping = true;
+            newVelocity.Set(0.0f, 0.0f);
+            rb.velocity = newVelocity;
+            newForce.Set(0.0f, jumpForce);
+            rb.AddForce(newForce, ForceMode2D.Impulse);
+        }
+    }
+
+    private void ApplyMovement()
+    {
+        if (isGrounded && !isOnSlope && !isJumping) //if not on slope
+        {
+            //Debug.Log("This one");
+            newVelocity.Set(movementSpeed * xInput, 0.0f);
+            rb.velocity = newVelocity;
+
+        }
+        else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping) //If on slope
+        {
+            // Fix this rotation file
+            newVelocity.Set(movementSpeed * slopeNormalPerp.x * -xInput, movementSpeed * slopeNormalPerp.y * -xInput);
+            rb.velocity = newVelocity;
+        }
+        else if (!isGrounded) //If in air
+        {
+            newVelocity.Set(movementSpeed * xInput, rb.velocity.y);
+            rb.velocity = newVelocity;
+        }
+
+    }
+
+    private void Flip()
+    {
+        facingDirection *= -1;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 
     private void UpdateAnimationState()
     {
         MovementState state;
 
-        if (dirX > 0f)
+        if (xInput > 0f)
         {
             state = MovementState.running;
-            sprite.flipX = false;
         }
-        else if (dirX < 0f)
+        else if (xInput < 0f)
         {
             state = MovementState.running;
-            sprite.flipX = true;
+        }
+        else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping) //If on slope
+        {
+            state = MovementState.running;
         }
         else
         {
             state = MovementState.idle;
         }
 
-        if (rb.velocity.y > .01f)
+        if (rb.velocity.y > .01f && !isGrounded)
         {
             state = MovementState.jumping;
         }
-        else if (rb.velocity.y < -.01f)
+        else if (rb.velocity.y < -.01f && !isGrounded)
         {
             state = MovementState.falling;
         }
@@ -97,8 +261,4 @@ public class PlayerMovement : MonoBehaviour
         anim.SetInteger("state", (int)state);
     }
 
-    private bool IsGrounded()
-    {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
-    }
 }
