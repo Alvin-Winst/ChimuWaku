@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class WakuMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D coll;
@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckInput()
     {
-        xInput = Input.GetAxisRaw("Horizontal");
+        xInput = Input.GetAxisRaw("Horizontal2");
 
         if (xInput == 1 && facingDirection == -1)
         {
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump2"))
         {
             Jump();
         }
