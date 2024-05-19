@@ -13,4 +13,4 @@ This project is made with Unity Editor Version 2022.3.20f1
 - [Ren](https://github.com/Ren9x)
 - [Aufa](https://github.com/aufamsp)
 - [Seth](https://github.com/sethyrical)
-- [Feby]
+- [Feby](https://github.com/FebyAgatha)
