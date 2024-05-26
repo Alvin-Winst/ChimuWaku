@@ -8,6 +8,7 @@ public class WakuMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    private Rigidbody2D rbChimu;
 
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
@@ -202,12 +203,28 @@ public class WakuMovement : MonoBehaviour
             newVelocity.Set(movementSpeed * xInput, 0.0f);
             rb.velocity = newVelocity;
 
+            if (transform.Find("Platform").Find("Chimu"))
+            {
+                Vector2 chimuPos = transform.Find("Platform").Find("Chimu").position;
+                rbChimu = transform.Find("Platform").Find("Chimu").GetComponent<Rigidbody2D>();
+                Vector2 chimuVelocity = rbChimu.velocity;
+                chimuPos.Set(chimuPos.x + newVelocity.x/75 + chimuVelocity.x/50, chimuPos.y + chimuVelocity.y/800);
+                rbChimu.MovePosition(chimuPos);
+            }
         }
         else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping) //If on slope
         {
             // Fix this rotation file
-            newVelocity.Set(movementSpeed * slopeNormalPerp.x * -xInput, movementSpeed * slopeNormalPerp.y * -xInput);
-            rb.velocity = newVelocity;
+            if (!transform.Find("Platform").Find("Chimu"))
+            {
+                newVelocity.Set(movementSpeed * slopeNormalPerp.x * -xInput, movementSpeed * slopeNormalPerp.y * -xInput);
+                rb.velocity = newVelocity;
+            }
+            else
+            {
+                newVelocity.Set(0, 0);
+                rb.velocity = newVelocity;
+            }
         }
         else if (!isGrounded) //If in air
         {
@@ -221,6 +238,11 @@ public class WakuMovement : MonoBehaviour
     {
         facingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
+
+        if (transform.Find("Platform").Find("Chimu"))
+        {
+            transform.Find("Platform").Find("Chimu").Rotate(0.0f, 180.0f, 0.0f);
+        }
     }
 
     private void OnDrawGizmos()
