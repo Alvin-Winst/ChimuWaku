@@ -50,6 +50,9 @@ TagManager:
   - name: Foreground
     uniqueID: 1827379365
     locked: 0
+  - name: Water
+    uniqueID: 4677079
+    locked: 0
   - name: Terrain
     uniqueID: 1425166189
     locked: 0
