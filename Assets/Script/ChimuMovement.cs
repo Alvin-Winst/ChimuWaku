@@ -16,6 +16,7 @@ public class ChimuMovement : MonoBehaviour
     [SerializeField] private float maxSlopeAngle;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private LayerMask whatIsPlatform;
     //[SerializeField] private PhysicsMaterial2D noFriction;
     //[SerializeField] private PhysicsMaterial2D fullFriction;
 
@@ -27,6 +28,7 @@ public class ChimuMovement : MonoBehaviour
     private int facingDirection = 1;
 
     private bool isGrounded;
+    private bool isOnPlatform;
     private bool isOnSlope;
     private bool isJumping;
     private bool canWalkOnSlope;
@@ -91,13 +93,14 @@ public class ChimuMovement : MonoBehaviour
     {
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         isGrounded = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, whatIsGround);
+        isOnPlatform = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, whatIsPlatform);
 
         if (rb.velocity.y <= 0.0f)
         {
             isJumping = false;
         }
 
-        if (isGrounded && !isJumping && slopeDownAngle <= maxSlopeAngle)
+        if ((isGrounded || isOnPlatform) && !isJumping && slopeDownAngle <= maxSlopeAngle)
         {
             canJump = true;
         }
@@ -196,7 +199,7 @@ public class ChimuMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
-        if (isGrounded && !isOnSlope && !isJumping) //if not on slope
+        if ((isGrounded || isOnPlatform) && !isOnSlope && !isJumping) //if not on slope
         {
             //Debug.Log("This one");
             newVelocity.Set(movementSpeed * xInput, 0.0f);
@@ -209,7 +212,7 @@ public class ChimuMovement : MonoBehaviour
             newVelocity.Set(movementSpeed * slopeNormalPerp.x * -xInput, movementSpeed * slopeNormalPerp.y * -xInput);
             rb.velocity = newVelocity;
         }
-        else if (!isGrounded) //If in air
+        else if (!(isGrounded || isOnPlatform)) //If in air
         {
             newVelocity.Set(movementSpeed * xInput, rb.velocity.y);
             rb.velocity = newVelocity;
@@ -249,11 +252,11 @@ public class ChimuMovement : MonoBehaviour
             state = MovementState.idle;
         }
 
-        if (rb.velocity.y > .01f && !isGrounded)
+        if (rb.velocity.y > .01f && !(isGrounded || isOnPlatform))
         {
             state = MovementState.jumping;
         }
-        else if (rb.velocity.y < -.01f && !isGrounded)
+        else if (rb.velocity.y < -.01f && !(isGrounded || isOnPlatform))
         {
             state = MovementState.falling;
         }
