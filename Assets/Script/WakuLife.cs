@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerLife : MonoBehaviour
+public class WakuLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
@@ -14,8 +14,8 @@ public class PlayerLife : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        //BGM = GameObject.FindGameObjectWithTag("BGM").GetComponent<AudioSource>();
 
+        //BGM = GameObject.FindGameObjectWithTag("BGM").GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,6 +23,7 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             Die();
+            Debug.Log("died");
         }
     }
 
