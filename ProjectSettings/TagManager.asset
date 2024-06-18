@@ -7,6 +7,8 @@ TagManager:
   - Platform
   - Trap
   - Playerr
+  - Water
+  - Collectible
   layers:
   - Default
   - TransparentFX
@@ -41,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background-Sky
+    uniqueID: 932856865
+    locked: 0
   - name: Background
     uniqueID: 1166098743
     locked: 0
@@ -50,9 +55,12 @@ TagManager:
   - name: Foreground
     uniqueID: 1827379365
     locked: 0
-  - name: Water
+  - name: WaterTiles
     uniqueID: 4677079
     locked: 0
   - name: Terrain
     uniqueID: 1425166189
+    locked: 0
+  - name: Foreground-Details
+    uniqueID: 2681825579
     locked: 0
