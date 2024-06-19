@@ -9,6 +9,7 @@ TagManager:
   - Playerr
   - Water
   - Collectible
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - Ground
   - Platform
-  - 
+  - MovingPlatform
   - 
   - 
   - 

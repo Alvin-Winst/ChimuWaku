@@ -17,6 +17,7 @@ public class ChimuMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whatIsPlatform;
+    [SerializeField] private LayerMask whatIsMovingPlatform;
     //[SerializeField] private PhysicsMaterial2D noFriction;
     //[SerializeField] private PhysicsMaterial2D fullFriction;
 
@@ -29,6 +30,7 @@ public class ChimuMovement : MonoBehaviour
 
     private bool isGrounded;
     private bool isOnPlatform;
+    private bool isOnMovingPlatform;
     private bool isOnSlope;
     private bool isJumping;
     private bool canWalkOnSlope;
@@ -94,13 +96,14 @@ public class ChimuMovement : MonoBehaviour
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         isGrounded = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, whatIsGround);
         isOnPlatform = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, whatIsPlatform);
+        isOnMovingPlatform = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, whatIsMovingPlatform);
 
         if (rb.velocity.y <= 0.0f)
         {
             isJumping = false;
         }
 
-        if ((isGrounded || isOnPlatform) && !isJumping && slopeDownAngle <= maxSlopeAngle)
+        if ((isGrounded || isOnPlatform || isOnMovingPlatform) && !isJumping && slopeDownAngle <= maxSlopeAngle)
         {
             canJump = true;
         }
@@ -204,7 +207,6 @@ public class ChimuMovement : MonoBehaviour
             //Debug.Log("This one");
             newVelocity.Set(movementSpeed * xInput, 0.0f);
             rb.velocity = newVelocity;
-
         }
         else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping) //If on slope
         {
@@ -217,7 +219,6 @@ public class ChimuMovement : MonoBehaviour
             newVelocity.Set(movementSpeed * xInput, rb.velocity.y);
             rb.velocity = newVelocity;
         }
-
     }
 
     private void Flip()
@@ -234,7 +235,6 @@ public class ChimuMovement : MonoBehaviour
     private void UpdateAnimationState()
     {
         MovementState state;
-
         if (xInput > 0f)
         {
             state = MovementState.running;
@@ -255,11 +255,19 @@ public class ChimuMovement : MonoBehaviour
         if (rb.velocity.y > .01f && !(isGrounded || isOnPlatform))
         {
             state = MovementState.jumping;
+            Debug.Log("Jumping");
         }
-        else if (rb.velocity.y < -.01f && !(isGrounded || isOnPlatform))
+        else if (rb.velocity.y < -.01f && (isJumping || !isOnMovingPlatform))
         {
             state = MovementState.falling;
+            Debug.Log("Free Falling");
         }
+        else if (rb.velocity.y < -.01f && (isOnMovingPlatform))
+        {
+            state = MovementState.idle;
+            Debug.Log("Falling Platform");
+        }
+
 
         anim.SetInteger("state", (int)state);
     }
