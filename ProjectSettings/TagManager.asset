@@ -52,14 +52,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Foreground
-    uniqueID: 1827379365
+  - name: Terrain
+    uniqueID: 1425166189
     locked: 0
   - name: WaterTiles
     uniqueID: 4677079
     locked: 0
-  - name: Terrain
-    uniqueID: 1425166189
+  - name: Foreground
+    uniqueID: 1827379365
     locked: 0
   - name: Foreground-Details
     uniqueID: 2681825579
