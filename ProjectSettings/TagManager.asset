@@ -14,7 +14,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Gate
   - Water
   - UI
   - Ground
@@ -58,6 +58,9 @@ TagManager:
     locked: 0
   - name: Urchin
     uniqueID: 3122523901
+    locked: 0
+  - name: Gate
+    uniqueID: 4037407897
     locked: 0
   - name: WaterTiles
     uniqueID: 4677079
