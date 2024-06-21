@@ -201,7 +201,7 @@ public class WakuMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
-        Debug.Log(swimWaku.isInWater);
+        // Debug.Log(swimWaku.isInWater);
         if (isGrounded && !isOnSlope && !isJumping) //if not on slope
         {
             //Debug.Log("This one");
