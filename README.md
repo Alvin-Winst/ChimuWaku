@@ -9,7 +9,9 @@ Goals:
 - Providing a local multiplayer feature that allows a player to play together with others. This can help reduce stress and loneliness, thereby improving the players' mental health.
 
 ## Documentation
+### Start Menu
 ![Start Menu](ChimuWaku/image.png)
+### Game Display
 ![Game Display](ChimuWaku/display.png)
 
 ## Setup
@@ -21,11 +23,12 @@ This project is made with Unity Editor Version 2022.3.20f1
 
 ## Collaborator
 <p align='center'>
-  <b>Follow us here 🌿</b><br>  
-  <a href="https://github.com/Alvin-Winst")>Alvin Ray Winston</a> |
+  <b>Follow us here 🌿</b><br> 
+  <a href="https://github.com/Alvin-Winst">Alvin Ray Winston</a> |
   <a href="https://github.com/Ren9x">Darren Leonard</a> |
+  <a href="https://github.com/sethyrical">Teresa Anjori</a> |<br>
   <a href="https://github.com/aufamsp">Aufa Muhammad Sulthan Pasha</a> |
-  <a href="https://github.com/sethyrical">Teresa Anjori</a> |
   <a href="https://github.com/FebyAgatha">Feby Agatha Christie Kurniawan</a><br><br>
+
   Don't forget to leave a star if you find this repository helpful ⭐⭐⭐⭐⭐
 </p>
