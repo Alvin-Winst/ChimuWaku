@@ -9,6 +9,7 @@ public class WakuMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
     private Rigidbody2D rbChimu;
+    private WakuSwim swimWaku;
 
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
@@ -21,6 +22,7 @@ public class WakuMovement : MonoBehaviour
     //[SerializeField] private PhysicsMaterial2D fullFriction;
 
     private float xInput;
+    private float yInput;
     private float slopeDownAngle;
     private float slopeSideAngle;
     private float lastSlopeAngle;
@@ -50,6 +52,7 @@ public class WakuMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        swimWaku = GameObject.Find("Swim").GetComponent<WakuSwim>();
 
         colliderSize = coll.size;
     }
@@ -72,6 +75,7 @@ public class WakuMovement : MonoBehaviour
     private void CheckInput()
     {
         xInput = Input.GetAxisRaw("Horizontal1");
+        yInput = Input.GetAxisRaw("Vertical1");
 
         if (xInput == 1 && facingDirection == -1)
         {
@@ -197,6 +201,7 @@ public class WakuMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
+        Debug.Log(swimWaku.isInWater);
         if (isGrounded && !isOnSlope && !isJumping) //if not on slope
         {
             //Debug.Log("This one");
@@ -212,7 +217,7 @@ public class WakuMovement : MonoBehaviour
                 rbChimu.MovePosition(chimuPos);
             }
         }
-        else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping) //If on slope
+        else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping && !swimWaku.isInWater) //If on slope
         {
             // Fix this rotation file
             if (!transform.Find("Platform").Find("Chimu"))
@@ -226,7 +231,13 @@ public class WakuMovement : MonoBehaviour
                 rb.velocity = newVelocity;
             }
         }
-        else if (!isGrounded) //If in air
+        else if (swimWaku.isInWater) //If in water
+        {
+            newVelocity.Set((movementSpeed - 3) * xInput, movementSpeed * yInput);
+            rb.velocity = newVelocity;
+        }
+
+        else if (!isGrounded && !swimWaku.isInWater) //If in air
         {
             newVelocity.Set(movementSpeed * xInput, rb.velocity.y);
             rb.velocity = newVelocity;
