@@ -9,6 +9,9 @@ Goals:
 - Providing a local multiplayer feature that allows a player to play together with others. This can help reduce stress and loneliness, thereby improving the players' mental health.
 
 ## Documentation
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/5c8128cb-3a75-4e19-92f5-aeeb1b2da0e6)
+
+
 ### Start Menu
 ![Start Menu](ChimuWaku/image.png)
 ### Game Display
