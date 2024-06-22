@@ -1,3 +1,5 @@
+# CHIMUWAKU PLATFORMER GAME
+
 This is our Software Engineering Project repositories.
 
 ChimuWaku is a video game with the platformer genre. This game is designed to be played by 2 people in local multiplayer because it consists of two characters, namely Chimu and Waku. The word ChimuWaku comes from Japanese which means 'cooperation'. As the name suggests, this game emphasizes cooperation between two players to solve puzzles and overcome the obstacles contained in each level. To add an interesting impression and advance the local games industry, we are highlighting the Indonesian children's story, namely 'The Rabbit and the Turtle' and developing the value of mutual cooperation in the game.
@@ -12,17 +14,50 @@ Goals:
 #### Chimu
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/3a5412df-caf3-4a2e-8935-e6c026cc7a45)
 
-A - Move Left </br>
-D - Move Right </br>
-Space_Bar - Jump </br>
+<table>
+    <tr>
+        <th>Key</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>Move Left</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>Move Right</td>
+    </tr>
+    <tr>
+        <td>[space]</td>
+        <td>Jump</td>
+    </tr>
+</table>
 
 #### Waku
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/b8e12b48-4c09-480b-aa0c-16914d3aafed)
 
-Left Arrow Key - Move Left </br>
-Right Arrow Key - Move Right </br>
-Up Arrow Key - Jump </br>
-Down Arrow Key - Go Down (only on water </br>
+<table>
+    <tr>
+        <th>Key</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>Left Arrow Key (&#8592;)</td>
+        <td>Move Left</td>
+    </tr>
+    <tr>
+        <td>Right Arrow Key (&#8594;)</td>
+        <td>Move Right</td>
+    </tr>
+    <tr>
+        <td>Up Arrow Key (&#8593;)</td>
+        <td>Jump/Swim Up</td>
+    </tr>
+    <tr>
+        <td>Down Arrow Key (&#8595;)</td>
+        <td>Swim Down</td>
+    </tr>
+</table>
 
 ### Start Menu
 ![Start Menu](ChimuWaku/image.png)
@@ -48,7 +83,7 @@ This project is made with Unity Editor Version 2022.3.20f1
   <b>Follow us here 🌿</b><br> 
   <a href="https://github.com/Alvin-Winst">Alvin Ray Winston</a> |
   <a href="https://github.com/Ren9x">Darren Leonard</a> |
-  <a href="https://github.com/sethyrical">Teresa Anjori</a> |<br>
+  <a href="https://github.com/sethyrical">Teresa Anjori</a> <br>
   <a href="https://github.com/aufamsp">Aufa Muhammad Sulthan Pasha</a> |
   <a href="https://github.com/FebyAgatha">Feby Agatha Christie Kurniawan</a><br><br>
 
