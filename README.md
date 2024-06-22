@@ -25,8 +25,6 @@ Up Arrow Key - Jump
 ### Game Display
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/cb72d654-3062-42cf-87ca-1f1fa61d684d)
 
-![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/564f8479-80c6-4d7a-9ec1-6dd837cfd95d)
-
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/9ebe6f69-5028-4ca8-a702-08a41feee61c)
 
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/68811406-7939-42dd-b943-d790d04482c9)
