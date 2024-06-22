@@ -1,4 +1,4 @@
-# ChimuWaku
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/e786f9ce-de8a-493a-a24a-25a15e4d9144)# ChimuWaku
 This is our Software Engineering Project repositories.
 
 ChimuWaku is a video game with the platformer genre. This game is designed to be played by 2 people in local multiplayer because it consists of two characters, namely Chimu and Waku. The word ChimuWaku comes from Japanese which means 'cooperation'. As the name suggests, this game emphasizes cooperation between two players to solve puzzles and overcome the obstacles contained in each level. To add an interesting impression and advance the local games industry, we are highlighting the Indonesian children's story, namely 'The Rabbit and the Turtle' and developing the value of mutual cooperation in the game.
@@ -23,13 +23,16 @@ Up Arrow Key - Jump
 ### Start Menu
 ![Start Menu](ChimuWaku/image.png)
 ### Game Display
-![Game Display](ChimuWaku/display.png)
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/cb72d654-3062-42cf-87ca-1f1fa61d684d)
 
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/564f8479-80c6-4d7a-9ec1-6dd837cfd95d)
 
-![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/da14f633-cd0d-4308-8722-8bd5c2311c1a)
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/9ebe6f69-5028-4ca8-a702-08a41feee61c)
 
-![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/978dce96-27ee-4002-bb3e-162aae89183e)
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/68811406-7939-42dd-b943-d790d04482c9)
+
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/617461f6-ff3d-4013-8017-74722f258b40)
+
 
 ## Setup
 - Run ```git clone https://github.com/Alvin-Winst/ChimuWaku.git``` in your cmd
