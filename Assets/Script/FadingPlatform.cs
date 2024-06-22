@@ -36,13 +36,13 @@ public class FadingPlatform : MonoBehaviour
 
     IEnumerator StartFade()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.55f);
         transform.gameObject.SetActive(false);
     }
 
     IEnumerator StartShow()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(1.1f);
         transform.gameObject.SetActive(true);
     }
 
