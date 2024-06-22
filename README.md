@@ -14,15 +14,15 @@ Goals:
 
 A - Move Left </br>
 D - Move Right </br>
-Space_Bar - Jump </br>
+[space] - Jump </br>
 
 #### Waku
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/b8e12b48-4c09-480b-aa0c-16914d3aafed)
 
-Left Arrow Key - Move Left </br>
-Right Arrow Key - Move Right </br>
-Up Arrow Key - Jump </br>
-Down Arrow Key - Go Down (only on water </br>
+Left Arrow Key (←)   - Move Left </br>
+Right Arrow Key (→)  - Move Right </br>
+Up Arrow Key (↑)     - Jump </br>
+Down Arrow Key (↓)   - Go Down (only on water) </br>
 
 ### Start Menu
 ![Start Menu](ChimuWaku/image.png)
@@ -48,7 +48,7 @@ This project is made with Unity Editor Version 2022.3.20f1
   <b>Follow us here 🌿</b><br> 
   <a href="https://github.com/Alvin-Winst">Alvin Ray Winston</a> |
   <a href="https://github.com/Ren9x">Darren Leonard</a> |
-  <a href="https://github.com/sethyrical">Teresa Anjori</a> |<br>
+  <a href="https://github.com/sethyrical">Teresa Anjori</a> <br>
   <a href="https://github.com/aufamsp">Aufa Muhammad Sulthan Pasha</a> |
   <a href="https://github.com/FebyAgatha">Feby Agatha Christie Kurniawan</a><br><br>
 
