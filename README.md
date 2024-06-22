@@ -1,4 +1,3 @@
-![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/e786f9ce-de8a-493a-a24a-25a15e4d9144)# ChimuWaku
 This is our Software Engineering Project repositories.
 
 ChimuWaku is a video game with the platformer genre. This game is designed to be played by 2 people in local multiplayer because it consists of two characters, namely Chimu and Waku. The word ChimuWaku comes from Japanese which means 'cooperation'. As the name suggests, this game emphasizes cooperation between two players to solve puzzles and overcome the obstacles contained in each level. To add an interesting impression and advance the local games industry, we are highlighting the Indonesian children's story, namely 'The Rabbit and the Turtle' and developing the value of mutual cooperation in the game.
