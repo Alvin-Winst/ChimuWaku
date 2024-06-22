@@ -12,9 +12,24 @@ Goals:
 #### Chimu
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/3a5412df-caf3-4a2e-8935-e6c026cc7a45)
 
-A - Move Left </br>
-D - Move Right </br>
-[space] - Jump </br>
+<table>
+    <tr>
+        <th>Key</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>Move Left</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>Move Right</td>
+    </tr>
+    <tr>
+        <td>[space]</td>
+        <td>Jump</td>
+    </tr>
+</table>
 
 #### Waku
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/b8e12b48-4c09-480b-aa0c-16914d3aafed)
