@@ -9,7 +9,16 @@ Goals:
 - Providing a local multiplayer feature that allows a player to play together with others. This can help reduce stress and loneliness, thereby improving the players' mental health.
 
 ## Documentation
+### Controls
+#### Chimu
+A - Move Left
+D - Move Right
+Space_Bar - Jump
 
+#### Waku
+Left Arrow Key - Move Left
+Right Arrow Key - Move Right
+Up Arrow Key - Jump
 
 ### Start Menu
 ![Start Menu](ChimuWaku/image.png)
