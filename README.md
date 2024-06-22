@@ -34,10 +34,28 @@ Goals:
 #### Waku
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/b8e12b48-4c09-480b-aa0c-16914d3aafed)
 
-Left Arrow Key (←)   - Move Left </br>
-Right Arrow Key (→)  - Move Right </br>
-Up Arrow Key (↑)     - Jump </br>
-Down Arrow Key (↓)   - Go Down (only on water) </br>
+<table>
+    <tr>
+        <th>Key</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>Left Arrow Key (&#8592;)</td>
+        <td>Move Left</td>
+    </tr>
+    <tr>
+        <td>Right Arrow Key (&#8594;)</td>
+        <td>Move Right</td>
+    </tr>
+    <tr>
+        <td>Up Arrow Key (&#8593;)</td>
+        <td>Jump</td>
+    </tr>
+    <tr>
+        <td>Down Arrow Key (&#8595;)</td>
+        <td>Go Down (only on water)</td>
+    </tr>
+</table>
 
 ### Start Menu
 ![Start Menu](ChimuWaku/image.png)
