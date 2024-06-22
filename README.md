@@ -11,14 +11,14 @@ Goals:
 ## Documentation
 ### Controls
 #### Chimu
-A - Move Left
-D - Move Right
-Space_Bar - Jump
+A - Move Left </br>
+D - Move Right </br>
+Space_Bar - Jump </br>
 
 #### Waku
-Left Arrow Key - Move Left
-Right Arrow Key - Move Right
-Up Arrow Key - Jump
+Left Arrow Key - Move Left </br>
+Right Arrow Key - Move Right </br>
+Up Arrow Key - Jump </br>
 
 ### Start Menu
 ![Start Menu](ChimuWaku/image.png)
