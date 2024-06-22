@@ -9,13 +9,18 @@ Goals:
 - Providing a local multiplayer feature that allows a player to play together with others. This can help reduce stress and loneliness, thereby improving the players' mental health.
 
 ## Documentation
-![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/5c8128cb-3a75-4e19-92f5-aeeb1b2da0e6)
 
 
 ### Start Menu
 ![Start Menu](ChimuWaku/image.png)
 ### Game Display
 ![Game Display](ChimuWaku/display.png)
+
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/564f8479-80c6-4d7a-9ec1-6dd837cfd95d)
+
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/da14f633-cd0d-4308-8722-8bd5c2311c1a)
+
+![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/978dce96-27ee-4002-bb3e-162aae89183e)
 
 ## Setup
 - Run ```git clone https://github.com/Alvin-Winst/ChimuWaku.git``` in your cmd
