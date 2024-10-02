@@ -255,17 +255,17 @@ public class ChimuMovement : MonoBehaviour
         if (rb.velocity.y > .01f && !(isGrounded || isOnPlatform))
         {
             state = MovementState.jumping;
-            Debug.Log("Jumping");
+            //Debug.Log("Jumping");
         }
         else if (rb.velocity.y < -.01f && (isJumping || !isOnMovingPlatform))
         {
             state = MovementState.falling;
-            Debug.Log("Free Falling");
+            //Debug.Log("Free Falling");
         }
         else if (rb.velocity.y < -.01f && (isOnMovingPlatform))
         {
             state = MovementState.idle;
-            Debug.Log("Falling Platform");
+            //Debug.Log("Falling Platform");
         }
 
 
