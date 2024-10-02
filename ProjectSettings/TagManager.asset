@@ -62,6 +62,9 @@ TagManager:
   - name: Gate
     uniqueID: 4037407897
     locked: 0
+  - name: PlayerSorting
+    uniqueID: 1044533373
+    locked: 0
   - name: WaterTiles
     uniqueID: 4677079
     locked: 0
