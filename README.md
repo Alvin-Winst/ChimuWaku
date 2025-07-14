@@ -70,8 +70,10 @@ Goals:
 
 ![image](https://github.com/Alvin-Winst/ChimuWaku/assets/160451658/617461f6-ff3d-4013-8017-74722f258b40)
 
+## Releases
+Download latest ChimuWaku game release on <a href="https://github.com/Alvin-Winst/ChimuWaku/releases">Releases</a> 
 
-## Setup
+## Setup Unity
 - Run ```git clone https://github.com/Alvin-Winst/ChimuWaku.git``` in your cmd
 - Open Unity Hub, Click on Add
 - Navigate into the folder you cloned this repository
