@@ -18,6 +18,8 @@ public class WakuMovement : MonoBehaviour
     [SerializeField] private float maxSlopeAngle;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatIsGround;
+    [SerializeField] private LayerMask whatIsMovingPlatform;
+
     //[SerializeField] private PhysicsMaterial2D noFriction;
     //[SerializeField] private PhysicsMaterial2D fullFriction;
 
@@ -31,6 +33,7 @@ public class WakuMovement : MonoBehaviour
 
     private bool isGrounded;
     private bool isOnSlope;
+    private bool isOnMovingPlatform;
     private bool isJumping;
     private bool canWalkOnSlope;
     private bool canJump;
@@ -96,13 +99,15 @@ public class WakuMovement : MonoBehaviour
     {
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         isGrounded = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, whatIsGround);
+        isOnMovingPlatform = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, whatIsMovingPlatform);
+
 
         if (rb.velocity.y <= 0.0f)
         {
             isJumping = false;
         }
 
-        if (isGrounded && !isJumping && slopeDownAngle <= maxSlopeAngle)
+        if ((isGrounded || isOnMovingPlatform) && !isJumping && slopeDownAngle <= maxSlopeAngle)
         {
             canJump = true;
         }

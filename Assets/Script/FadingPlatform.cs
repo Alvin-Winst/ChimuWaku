@@ -19,24 +19,21 @@ public class FadingPlatform : MonoBehaviour
         {
             anim.SetTrigger("Fading");
             StartCoroutine(StartFade());
-/*
-            anim.SetTrigger("Muncul");
-            StartCoroutine(StartShow());*/
+
+            //anim.SetTrigger("Muncul");
+            //StartCoroutine(StartShow());
         }
     }
 
-/*    private void Update()
-    {
-        if(!transform.gameObject.activeInHierarchy)
-        {
-        }
-    }
-*/
+    //private void Update()
+    //{
+    //}
+
 
 
     IEnumerator StartFade()
     {
-        yield return new WaitForSeconds(0.55f);
+        yield return new WaitForSeconds(0.8f);
         transform.gameObject.SetActive(false);
     }
 

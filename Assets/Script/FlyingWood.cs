@@ -1,11 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
-public class LogSpawnButton : MonoBehaviour
+public class FlyingWood : MonoBehaviour
 {
     [SerializeField] private Transform platform;
     [SerializeField] private Transform startPoint;
@@ -78,5 +75,4 @@ public class LogSpawnButton : MonoBehaviour
             return endPoint.position;
         }
     }
-
 }
