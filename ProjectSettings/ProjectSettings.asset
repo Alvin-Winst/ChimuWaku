@@ -704,11 +704,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 6c15f84d-2aa2-4375-b7cd-f3a1743973b8
+  cloudProjectId: 2fc73d81-b720-47de-b960-382ed475fac5
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: ChimuWaku
-  organizationId: alvrw
+  projectName: ChimuWaku 2024-10-02_22-32-26
+  organizationId: darrenleonard04
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

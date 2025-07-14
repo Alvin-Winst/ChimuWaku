@@ -14,6 +14,10 @@ public class startMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void skipToGame(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //skip to game; Script applies to ONLY Skip Cutscene
+    }
+
     public void QuitGame(Component confirmPopup)
     {
         confirmPopup.gameObject.SetActive(true);
